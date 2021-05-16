@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{add7531c-79a9-4689-912d-33af3a16623b}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CAN.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCP2515.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCPSettings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CAN.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCP2515.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCP2515Enums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCPFilter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCPSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)MCPCAN.vcxitems.filters" />
+  </ItemGroup>
+</Project>
